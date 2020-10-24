@@ -34,7 +34,7 @@ spec:
     cleanupOnFail: true
 
   dependsOn:
-    - name: kube-prometheus-stack
+    - name: monitoring
       namespace: observability
 
   values:
