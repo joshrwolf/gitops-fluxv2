@@ -6,13 +6,11 @@ metadata:
   namespace: demos
 spec:
   hosts:
-    - 'podinfo.local'
+    - "podinfo.local"
   gateways:
     - public-gateway.istio-system.svc.cluster.local
   http:
-    - match:
-        - port: 9898
-      route:
+    - route:
         - destination:
             port:
               number: 9898
