@@ -1,0 +1,19 @@
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: podinfo
+  namespace: demos
+spec:
+  hosts:
+    - 'podinfo.local'
+  gateways:
+    - public-gateway.istio-system.svc.cluster.local
+  http:
+    - match:
+        - port: 9898
+      route:
+        - destination:
+            port:
+              number: 9898
+            host: podinfo.demos.svc.cluster.local
