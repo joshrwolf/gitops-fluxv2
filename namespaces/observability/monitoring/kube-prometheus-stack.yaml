@@ -41,6 +41,9 @@ spec:
 
     grafana:
       enabled: true
+      image:
+        repository: grafana/grafana
+        tag: 7.2.2
       additionalDataSources:
         - name: loki
           type: loki
