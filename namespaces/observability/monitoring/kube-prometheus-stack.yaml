@@ -41,6 +41,11 @@ spec:
 
     grafana:
       enabled: true
+      additionalDataSources:
+        - name: loki
+          type: loki
+          access: proxy
+          url: http://loki.observability.svc.cluster.local:3100
 
     prometheus:
       enabled: true
