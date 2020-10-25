@@ -5,7 +5,7 @@ commonLabels:
   grafana_dashboard: "true"
 
 configMapGenerator:
-  - name: gotk
+  - name: gotk-dashboard
     files:
       - cluster.json
       - control-plane.json
