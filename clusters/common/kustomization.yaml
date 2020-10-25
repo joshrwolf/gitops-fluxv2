@@ -1,0 +1,5 @@
+resources:
+  - ../../namespaces/cert-manager
+  - ../../namespaces/istio-operator
+  - ../../namespaces/istio-system
+  - ../../namespaces/observability
