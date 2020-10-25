@@ -6,7 +6,7 @@ metadata:
   namespace: demos
 spec:
   hosts:
-    - "podinfo.local"
+    - "podinfo.gitops.local"
   gateways:
     - public-gateway.istio-system.svc.cluster.local
   http:

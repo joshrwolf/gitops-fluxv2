@@ -6,7 +6,7 @@ metadata:
   namespace: observability
 spec:
   hosts:
-    - "grafana.local"
+    - "grafana.gitops.local"
   gateways:
     - public-gateway.istio-system.svc.cluster.local
   http:
