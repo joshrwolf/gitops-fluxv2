@@ -1,5 +1,0 @@
-resources:
-  - kube-prometheus-stack.yaml
-  - alertmanager-vs.yaml
-  - grafana-vs.yaml
-  - prometheus-vs.yaml
