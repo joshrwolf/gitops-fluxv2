@@ -39,7 +39,7 @@ spec:
 
   values:
     watchNamespace: observability
-    createCustomResource: true
+    createCustomResource: false
     monitoring:
       serviceMonitor:
         enabled: true
