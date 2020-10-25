@@ -14,6 +14,7 @@ spec:
     /*
     # include deploy dir
     !/clusters/
+    !/cluster/
     !/namespaces/
     /namespaces/**/*.md
     # include secrets
@@ -28,7 +29,7 @@ metadata:
   namespace: gotk-system
 spec:
   interval: 1m
-  path: './clusters/common/'
+  path: './cluster/'
   sourceRef:
     kind: GitRepository
     name: gitops-fluxv2
