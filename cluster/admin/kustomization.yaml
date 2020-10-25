@@ -3,3 +3,4 @@ resources:
   - observability/
   - cert-manager/
   - gatekeeper/
+  - rancher/
