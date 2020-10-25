@@ -8,5 +8,5 @@ spec:
   dnsNames:
     - "*.local"
   issuerRef:
-    name: selfsigned
+    name: ca
     kind: ClusterIssuer
