@@ -1,0 +1,38 @@
+apiVersion: v1
+data:
+    password: ENC[AES256_GCM,data:E9mKnSSQrDlCasgi,iv:3yjN4Q2m2VIcvQxE4OSQoBdanOovJ6m+yRs/52B62YY=,tag:9lIsLv3n/ZcdWM1YcmySTw==,type:str]
+    user: ENC[AES256_GCM,data:X92DVHzqEyk=,iv:KW4aPo9IiYgYwzQ0kcQ1yv3iPMHe7CZLjuhs/BUnkJI=,tag:KPOS41V+RI2qD5kTYNEwhQ==,type:str]
+kind: Secret
+metadata:
+    name: grafana-admin-creds
+    namespace: observability
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    lastmodified: '2020-10-25T03:05:21Z'
+    mac: ENC[AES256_GCM,data:NRUOKWfprO38HGMGbr/uLHjUNIoeOW7pP0RgL6XZikp3FnBIlViryf42CYtuuvFAT04KY6obgDuM7VJiWl2Q3RYnTvcMrawjZ16CgobHwo+FI+UhZkxDdAN7+7iSasRfKShH7T8uBcycGvvyv+r045bTkzw2lBEGGnZwgchofXA=,iv:+7YTn2/TepSRkg8kLrHb0L7QsZ09SXIGr1drHuASn24=,tag:Tm9zF0Ivm6w9al8HYoPlCA==,type:str]
+    pgp:
+    -   created_at: '2020-10-25T03:05:21Z'
+        enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMA/vNRViwHVrmARAAkxJAFccHexAPfCeHq90iIcx2kb4p6OzsaDjr4m58yjA9
+            zHwH/WJagBt1oK8YTlbKljWb27DCNE9j/F3lN2lpYwWue1apk7qkQPCyOsnhjgJ3
+            9sqDLFCNWM5PO3i/jnYw2xh7xJhh4M45OzoK2SGp7kazlNXYsON5+A41sZiudpdj
+            SPWwWp9ALxqOkfM8uwCkmqemmA3hZOFn3+yksw69Z1sfk3jeDy9TaI2HGSkxazkk
+            cj+8nnw4Qp6d2HwVrJkxhH6tr+o+WLJm9dBjm5K3YLwLtY+AIWFIvkv3hopfWPw/
+            A4Ict6kAtuUA6SScQhoiPg5qCQ8aFm05jsBTEZbWlxQak4HvbuRIBu+2/u2PTMGW
+            vIku9s5GH6ajPEkQ3bOSOi3bqV/pXLge0//jxqs/WSmyMWN2Nybobe91ggEpi4tM
+            6K8dvPG2oNLMJTjXzvXrnikWu+pT2KPKO7l4wgi5EdkdPgq7rikQxcE008qwt/h8
+            poOObuEmdGdCrfccxLS6+reczUBJcsbL26gVW/NpWHhW8DoOy2DPU7q3GGFZuWJ8
+            cu6p0b345ceMKZEODaZb+x+7hy3zBTkDpILRGXeXDUNrpJfHkOz+qgc1DSXVmh62
+            1AcFEfIX+rqA4oMecU9IaH/qk0LJKKaitvabFq5T6hW0Qoy2rHr4SeD9IdTPkiPS
+            XgGYBq5g680ltZ50Nf2UIJPpZHtaAMFdDjY70X7fvJUzIjYAvqPW18bb8AqECUrJ
+            NTU4nWoM4/0270cV1UbedAz20PAfK3oLlCq1hfbjOEFzuTmjAMqsjyBLW14BThQ=
+            =37s9
+            -----END PGP MESSAGE-----
+        fp: 22CA94D5C59ABA475A0E5D5A253A4C0CE1D1926C
+    encrypted_regex: ^(data|stringData)$
+    version: 3.6.1
