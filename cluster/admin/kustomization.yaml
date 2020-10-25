@@ -2,3 +2,4 @@ resources:
   - istio/
   - observability/
   - cert-manager/
+  - gatekeeper/
