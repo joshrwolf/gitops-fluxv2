@@ -10,3 +10,6 @@ spec:
     kind: GitRepository
     name: this
   prune: true
+  dependsOn:
+    - name: admin
+      namespace: gotk-system
