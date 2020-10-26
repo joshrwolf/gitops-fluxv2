@@ -80,3 +80,7 @@ spec:
 
     alertmanager:
       enabled: true
+      ingress:
+        enabled: true
+      paths:
+        - /*
