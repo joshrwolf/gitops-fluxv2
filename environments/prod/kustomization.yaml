@@ -7,20 +7,13 @@ generatorOptions:
   disableNameSuffixHash: true
 
 vars:
-  - name: ENV
+  - name: NAME
     objref:
       kind: ConfigMap
       name: env
       apiVersion: v1
     fieldref:
-      fieldpath: data.ENV
-  - name: REPLICAS
-    objref:
-      kind: ConfigMap
-      name: env
-      apiVersion: v1
-    fieldref:
-      fieldpath: data.REPLICAS
+      fieldpath: data.NAME
 
 configurations:
   - config.yaml
