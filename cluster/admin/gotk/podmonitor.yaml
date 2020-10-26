@@ -4,6 +4,8 @@ kind: PodMonitor
 metadata:
   name: helm-controller
   namespace: gotk-system
+  labels:
+    release: monitoring
 spec:
   selector:
     matchLabels:
@@ -16,6 +18,8 @@ kind: PodMonitor
 metadata:
   name: kustomize-controller
   namespace: gotk-system
+  labels:
+    release: monitoring
 spec:
   selector:
     matchLabels:
@@ -28,6 +32,8 @@ kind: PodMonitor
 metadata:
   name: notification-controller
   namespace: gotk-system
+  labels:
+    release: monitoring
 spec:
   selector:
     matchLabels:
@@ -40,6 +46,8 @@ kind: PodMonitor
 metadata:
   name: source-controller
   namespace: gotk-system
+  labels:
+    release: monitoring
 spec:
   selector:
     matchLabels:
