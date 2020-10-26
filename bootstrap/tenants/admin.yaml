@@ -5,7 +5,7 @@ metadata:
   namespace: gotk-system
 spec:
   interval: 1m
-  path: './cluster/admin/'
+  path: './environments/dev/'
   sourceRef:
     kind: GitRepository
     name: this

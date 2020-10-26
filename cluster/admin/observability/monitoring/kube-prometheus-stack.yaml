@@ -33,6 +33,14 @@ spec:
     timeout: 1m
     cleanupOnFail: true
 
+  valuesFrom:
+    - kind: ConfigMap
+      name: env-values
+      optional: true
+    - kind: Secret
+      name: env-values
+      optional: true
+
   values:
     fullnameOverride: monitoring
 
@@ -46,6 +54,11 @@ spec:
       image:
         repository: grafana/grafana
         tag: 7.2.2
+      ingress:
+        enabled: true
+        annotations:
+          kubernetes.io/ingress.class: istio
+        path: /*
       additionalDataSources:
         - name: loki
           type: loki
@@ -58,6 +71,12 @@ spec:
 
     prometheus:
       enabled: true
+      ingress:
+        enabled: true
+        annotations:
+          kubernetes.io/ingress.class: istio
+        paths:
+          - /*
 
     alertmanager:
       enabled: true

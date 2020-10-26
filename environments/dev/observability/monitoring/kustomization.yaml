@@ -1,0 +1,7 @@
+configMapGenerator:
+  - name: env-values
+    files:
+      - values.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true

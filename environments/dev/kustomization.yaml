@@ -1,2 +1,5 @@
 resources:
   - ../../cluster/admin
+
+  # Environment specific helm values created as kustomize config/secret generators
+  - observability/

@@ -1,0 +1,14 @@
+grafana:
+  ingress:
+    hosts:
+      - "grafana.gitops.local"
+
+prometheus:
+  ingress:
+    hosts:
+      - "prometheus.gitops.local"
+
+alertmanager:
+  ingress:
+    hosts:
+      - "alerts.gitops.local"
