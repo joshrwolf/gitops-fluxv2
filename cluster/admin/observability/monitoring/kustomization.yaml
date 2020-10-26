@@ -1,2 +1,5 @@
 resources:
   - kube-prometheus-stack.yaml
+
+  # Load common admin dashboards
+  - dashboards/
