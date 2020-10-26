@@ -7,5 +7,13 @@ commonLabels:
 configMapGenerator:
   - name: admin-dashboards
     files:
+      # GitOps ToolKit
       - gotk/cluster.json
       - gotk/control-plane.json
+
+      # Istio
+      - istio/control-plane.json
+      - istio/mesh.json
+      - istio/performance.json
+      - istio/service.json
+      - istio/workload.json
