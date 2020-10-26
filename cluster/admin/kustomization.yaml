@@ -3,7 +3,7 @@ resources:
   - observability/
   - cert-manager/
   - gatekeeper/
-  - rancher/
+#  - rancher/
 
 patches:
     # Add common parameters to all HelmReleases
