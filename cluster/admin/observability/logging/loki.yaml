@@ -16,27 +16,6 @@ spec:
         namespace: gotk-system
       interval: 5m
 
-  test:
-    enable: false
-
-  install:
-    remediation: # perform remediation when helm install fails
-      retries: 5
-
-  upgrade:
-    remediation: # perform remediation when helm upgrade fails
-      retries: 3
-      remediateLastFailure: true # remediate the last failure, when no retries remain
-    cleanupOnFail: true
-
-  rollback:
-    timeout: 1m
-    cleanupOnFail: true
-
-  dependsOn:
-    - name: monitoring
-      namespace: observability
-
   values:
     loki:
       enabled: true
