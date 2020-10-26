@@ -11,11 +11,22 @@ configMapGenerator:
       - gotk/cluster.json
       - gotk/control-plane.json
 
-  - name: istio-admin-dashboards
+  - name: istio-control-plane-dashboard
     files:
-      # Istio
       - istio/control-plane.json
+
+  - name: istio-mesh-dashboard
+    files:
       - istio/mesh.json
+
+  - name: istio-performance-dashboard
+    files:
       - istio/performance.json
+
+  - name: istio-service-dashboard
+    files:
       - istio/service.json
+
+  - name: istio-workload-dashboard
+    files:
       - istio/workload.json
