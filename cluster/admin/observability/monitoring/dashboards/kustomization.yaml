@@ -1,9 +1,11 @@
+namespace: observability
+
 commonLabels:
   release: monitoring
   grafana_dashboard: "1"
 
 configMapGenerator:
-  - name: custom
+  - name: admin-dashboards
     files:
       - gotk/cluster.json
       - gotk/control-plane.json
