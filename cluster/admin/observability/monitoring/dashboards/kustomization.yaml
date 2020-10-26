@@ -11,9 +11,9 @@ configMapGenerator:
       - gotk/cluster.json
       - gotk/control-plane.json
 
-  - name: istio-control-plane-dashboard
+  - name: istio-pilot-dashboard
     files:
-      - istio/control-plane.json
+      - istio/pilot.json
 
   - name: istio-mesh-dashboard
     files:

@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "6.4.3"
+      "version": "7.1.0"
     },
     {
       "type": "panel",
@@ -26,13 +26,19 @@
       "type": "datasource",
       "id": "prometheus",
       "name": "Prometheus",
-      "version": "5.0.0"
+      "version": "1.0.0"
     },
     {
       "type": "panel",
-      "id": "table",
-      "name": "Table",
+      "id": "singlestat",
+      "name": "Singlestat",
       "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "text",
+      "name": "Text",
+      "version": "7.1.0"
     }
   ],
   "annotations": {
@@ -48,9 +54,8 @@
       }
     ]
   },
-  "description": "Istio Workload Dashboard version 1.8.0-alpha.0",
   "editable": false,
-  "gnetId": 7630,
+  "gnetId": null,
   "graphTooltip": 0,
   "iteration": 1531345461465,
   "links": [],
