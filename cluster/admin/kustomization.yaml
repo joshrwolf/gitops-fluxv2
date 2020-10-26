@@ -1,4 +1,5 @@
 resources:
+  - gotk/
   - istio/
   - observability/
   - cert-manager/
