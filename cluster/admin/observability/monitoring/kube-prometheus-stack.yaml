@@ -55,6 +55,9 @@ spec:
           kubernetes.io/ingress.class: istio
         paths:
           - /*
+      prometheusSpec:
+        # service port naming conventions
+        portName: http-web
 
     alertmanager:
       enabled: true

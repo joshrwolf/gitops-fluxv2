@@ -5,12 +5,14 @@ commonLabels:
   grafana_dashboard: "1"
 
 configMapGenerator:
-  - name: admin-dashboards
+  - name: gotk-admin-dashboards
     files:
       # GitOps ToolKit
       - gotk/cluster.json
       - gotk/control-plane.json
 
+  - name: istio-admin-dashboards
+    files:
       # Istio
       - istio/control-plane.json
       - istio/mesh.json

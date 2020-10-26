@@ -1,0 +1,8 @@
+namespace: observability
+
+commonLabels:
+  release: monitoring
+
+resources:
+  - istio/control-plane.yaml
+  - istio/data-plane.yaml
