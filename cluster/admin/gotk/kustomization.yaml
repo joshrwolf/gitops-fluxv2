@@ -1,0 +1,5 @@
+resources:
+  - podmonitor.yaml
+  - podmonitor.yaml
+
+  - chart-repositories/
