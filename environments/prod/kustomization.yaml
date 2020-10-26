@@ -1,0 +1,29 @@
+configMapGenerator:
+  - name: env
+    envs:
+      - dot.env
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+vars:
+  - name: ENV
+    objref:
+      kind: ConfigMap
+      name: env
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.ENV
+  - name: REPLICAS
+    objref:
+      kind: ConfigMap
+      name: env
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.REPLICAS
+
+configurations:
+  - config.yaml
+
+resources:
+  - deployment.yaml
