@@ -1,5 +1,9 @@
 resources:
+  # Admin tenant
   - ../../cluster/admin
+
+  # Steve tenant (in a real world scenario this would/should be applied separately)
+  - ../../cluster/steve
 
   # Environment specific helm values created as kustomize config/secret generators
 #  -

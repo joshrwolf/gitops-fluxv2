@@ -1,0 +1,10 @@
+namespace: kubeinvaders
+
+resources:
+  - namespace.yaml
+  - kubeinvaders.yaml
+
+configMapGenerator:
+  - name: configs
+    literals:
+      - NAMESPACE=steve,kubeinvaders
