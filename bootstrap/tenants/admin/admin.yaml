@@ -20,7 +20,7 @@ metadata:
   namespace: gotk-system
 spec:
   interval: 1m
-  path: './.secrets/'
+  path: './environments/dev/secrets/'
   sourceRef:
     kind: GitRepository
     name: this

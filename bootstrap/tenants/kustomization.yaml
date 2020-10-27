@@ -1,5 +1,0 @@
-namespace: gotk-system
-
-resources:
-  - admin.yaml
-  - steve.yaml
