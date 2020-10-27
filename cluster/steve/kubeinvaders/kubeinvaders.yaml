@@ -130,8 +130,6 @@ spec:
         - env:
             - name: ROUTE_HOST
               value: "kubeinvaders.$(hostname)"
-            - name: NAMESPACE
-              value: observability,istio-system,steve
             - name: TOKEN
               valueFrom:
                 secretKeyRef:
