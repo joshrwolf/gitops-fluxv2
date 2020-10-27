@@ -33,5 +33,5 @@ spec:
     cleanupOnFail: true
 
   values:
-    replicaCount: 10
+    replicaCount: 2
 
