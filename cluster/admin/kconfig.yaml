@@ -1,0 +1,7 @@
+varReference:
+  - kind: HelmRelease
+    path: spec/values/hostname
+  - kind: VirtualService
+    path: spec/hosts
+  - kind: Certificate
+    path: spec/dnsNames

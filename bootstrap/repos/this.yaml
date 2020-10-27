@@ -12,12 +12,9 @@ spec:
   ignore: |
     # exclude all
     /*
-    # include deploy dir
-    !/clusters/
+    # include deploy dirs
     !/cluster/
-    !/namespaces/
     !/environments/
-    /namespaces/**/*.md
     # include secrets
     !/.secrets/
 

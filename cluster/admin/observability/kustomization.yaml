@@ -2,4 +2,4 @@ resources:
   - namespace.yaml
 
   - monitoring/
-  - logging/
+#  - logging/

@@ -37,11 +37,6 @@ spec:
       image:
         repository: grafana/grafana
         tag: 7.2.2
-      ingress:
-        enabled: true
-        annotations:
-          kubernetes.io/ingress.class: istio
-        path: /*
       admin:
         existingSecret: grafana-admin-creds
         userKey: user
@@ -49,21 +44,9 @@ spec:
 
     prometheus:
       enabled: true
-      ingress:
-        enabled: true
-        annotations:
-          kubernetes.io/ingress.class: istio
-        paths:
-          - /*
       prometheusSpec:
         # service port naming conventions
         portName: http-web
 
     alertmanager:
       enabled: true
-      ingress:
-        enabled: true
-        annotations:
-          kubernetes.io/ingress.class: istio
-        paths:
-          - /*

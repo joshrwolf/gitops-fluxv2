@@ -1,8 +1,13 @@
 resources:
   - kube-prometheus-stack.yaml
 
+    # Virtual Services not part of primary chart
+  - alertmanager-vs.yaml
+  - grafana-vs.yaml
+  - prometheus-vs.yaml
+
   # Load common pod/service monitors
-  - monitors/
+#  - monitors/
 
   # Load common admin dashboards
-  - dashboards/
+#  - dashboards/

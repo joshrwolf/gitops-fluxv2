@@ -1,5 +1,0 @@
-varReference:
-  - path: spec/template/metadata/labels/app
-    kind: Deployment
-  - path: spec/template/spec/containers/name
-    kind: Deployment

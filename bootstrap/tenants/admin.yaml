@@ -1,31 +1,31 @@
-#apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-#kind: Kustomization
-#metadata:
-#  name: admin
-#  namespace: gotk-system
-#spec:
-#  interval: 1m
-#  path: './environments/dev/'
-#  sourceRef:
-#    kind: GitRepository
-#    name: this
-#  prune: true
-#
-#---
-#
-#apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-#kind: Kustomization
-#metadata:
-#  name: admin-secrets
-#  namespace: gotk-system
-#spec:
-#  interval: 1m
-#  path: './.secrets/'
-#  sourceRef:
-#    kind: GitRepository
-#    name: this
-#  prune: true
-#  decryption:
-#    provider: sops
-#    secretRef:
-#      name: sops-gpg
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: admin
+  namespace: gotk-system
+spec:
+  interval: 1m
+  path: './environments/dev/'
+  sourceRef:
+    kind: GitRepository
+    name: this
+  prune: true
+
+---
+
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: admin-secrets
+  namespace: gotk-system
+spec:
+  interval: 1m
+  path: './.secrets/'
+  sourceRef:
+    kind: GitRepository
+    name: this
+  prune: true
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-gpg

@@ -2,4 +2,11 @@ resources:
   - ../../cluster/admin
 
   # Environment specific helm values created as kustomize config/secret generators
-  - observability/
+#  -
+
+configMapGenerator:
+  - name: global-configs
+    namespace: gotk-system
+    behavior: merge
+    envs:
+      - globals.env

@@ -21,4 +21,4 @@ spec:
       namespace: cert-manager
 
   values:
-    hostname: rancher.gitops.local
+    hostname: rancher.$(hostname)
