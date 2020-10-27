@@ -6,7 +6,7 @@ metadata:
   namespace: observability
 spec:
   hosts:
-    - "alert-manager.$(hostname)"
+    - "alerts.$(hostname)"
   gateways:
     - public-gateway.istio-system.svc.cluster.local
   http:
