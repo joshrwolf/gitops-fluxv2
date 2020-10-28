@@ -7,7 +7,7 @@ metadata:
 spec:
   interval: 1m
   ref:
-    branch: main
+    branch: structure
   url: https://github.com/joshrwolf/gitops-fluxv2.git
   ignore: |
     # exclude all

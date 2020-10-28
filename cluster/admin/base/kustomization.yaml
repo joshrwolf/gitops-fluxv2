@@ -1,10 +1,10 @@
 resources:
-#  - gotk/
-#  - istio/
+  - gotk/
+  - istio/
   - observability/
-#  - cert-manager/
-#  - gatekeeper/
-  - rancher/
+  - cert-manager/
+  - gatekeeper/
+#  - rancher/
 
 patches:
     # Add common parameters to all HelmReleases
