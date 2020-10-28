@@ -7,3 +7,6 @@ spec:
   secretName: wildcard-cert
   dnsNames:
     - "*.$(hostname)"
+  issuerRef:
+    name: ca
+    kind: ClusterIssuer
