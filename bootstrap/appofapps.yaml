@@ -14,4 +14,14 @@ spec:
     repoURL: https://github.com/joshrwolf/gitops-fluxv2.git
     targetRevision: structure
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+    retry:
+      limit: 5
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m
