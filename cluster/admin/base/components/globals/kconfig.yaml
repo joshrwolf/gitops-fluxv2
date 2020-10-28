@@ -3,5 +3,7 @@ varReference:
     path: spec/values/hostname
   - kind: VirtualService
     path: spec/hosts
+  - kind: Gateway
+    path: spec/servers/hosts
   - kind: Certificate
     path: spec/dnsNames
