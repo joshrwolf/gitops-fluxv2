@@ -4,5 +4,6 @@ commonLabels:
   release: monitoring
 
 resources:
+  - gotk/all.yaml
   - istio/control-plane.yaml
   - istio/data-plane.yaml

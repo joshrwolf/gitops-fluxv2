@@ -10,4 +10,4 @@ resources:
   - monitors/
 
   # Load common admin dashboards
-  - dashboards/
+#  - dashboards/

@@ -1,0 +1,17 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bootstrap-cluster
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  project: default
+  source:
+    path: stack
+    repoURL: https://github.com/joshrwolf/gitops-fluxv2.git
+    targetRevision: structure
+  syncPolicy:
+    automated: {}

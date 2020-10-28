@@ -4,6 +4,6 @@ metadata:
   name: wildcard
   namespace: istio-system
 spec:
-  secretName: wildcard-cert
-  dnsNames:
-    - "*.$(hostname)"
+  issuerRef:
+    name: ca
+    kind: ClusterIssuer

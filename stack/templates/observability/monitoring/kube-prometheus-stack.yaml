@@ -1,0 +1,27 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: monitoring
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: observability
+    server: {{ .Values.cluster }}
+  project: {{ .Values.project }}
+  source:
+    chart: kube-prometheus-stack
+    repoURL: https://prometheus-community.github.io/helm-charts
+    targetRevision: 10.1.2
+    helm:
+      valueFiles:
+        - values.yaml
+      values: |
+        fullnameOverride: monitoring
+        prometheusOperator:
+          enabled: true
+          manageCrds: true
+          createCustomResource: true
+

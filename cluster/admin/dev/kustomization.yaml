@@ -2,8 +2,14 @@ resources:
   # Admin tenant
   - ../base
 
+  # Environment specific entries
+  - cert-manager/clusterissuer.yaml
+
   # Environment specific helm values created as kustomize config/secret generators
 #  -
+
+patchesStrategicMerge:
+  - istio/patch-certificate.yaml
 
 configMapGenerator:
   - name: global-configs
