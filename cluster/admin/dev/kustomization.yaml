@@ -1,9 +1,16 @@
 resources:
   # Admin tenant
-  - ../../cluster/admin
+  - ../base
+
+  # Environment specific entries
+  - cert-manager/clusterissuer.yaml
+  - istio/certificate.yaml
 
   # Environment specific helm values created as kustomize config/secret generators
 #  -
+
+components:
+  - ../base/components/globals
 
 configMapGenerator:
   - name: global-configs

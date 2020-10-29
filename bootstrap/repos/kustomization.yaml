@@ -1,4 +1,0 @@
-namespace: gotk-system
-
-resources:
-  - this.yaml

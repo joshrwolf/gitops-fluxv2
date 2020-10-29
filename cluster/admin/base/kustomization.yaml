@@ -30,21 +30,3 @@ patches:
         rollback:
           timeout: 1m
           cleanupOnFail: true
-
-configMapGenerator:
-  - name: global-configs
-    namespace: gotk-system
-    envs:
-      - globals.env
-
-vars:
-  - name: hostname
-    objref:
-      kind: ConfigMap
-      name: global-configs
-      apiVersion: v1
-    fieldref:
-      fieldpath: data.hostname
-
-configurations:
-  - kconfig.yaml

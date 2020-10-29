@@ -1,3 +1,4 @@
+---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
@@ -5,7 +6,7 @@ metadata:
   namespace: gotk-system
 spec:
   interval: 1m
-  path: './environments/dev/'
+  path: './cluster/admin/dev/'
   sourceRef:
     kind: GitRepository
     name: this
@@ -20,7 +21,7 @@ metadata:
   namespace: gotk-system
 spec:
   interval: 1m
-  path: './.secrets/'
+  path: './cluster/admin/dev/secrets/'
   sourceRef:
     kind: GitRepository
     name: this

@@ -5,7 +5,7 @@ metadata:
   namespace: cattle-system
 spec:
   hosts:
-    - "rancher.gitops.local"
+    - "rancher.$(hostname)"
   gateways:
     - public-gateway.istio-system.svc.cluster.local
   http:

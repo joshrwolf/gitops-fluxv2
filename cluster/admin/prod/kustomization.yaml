@@ -1,5 +1,5 @@
 resources:
-  - ../../cluster/admin
+  - ../base
 
   # Environment specific helm values created as kustomize config/secret generators
 #  -
