@@ -18,11 +18,36 @@ fatal() {
     exit 1
 }
 
-{
-  kustomize build cluster/admin/base/gotk/toolkit | kubectl apply -f -
-  kubectl wait --for=condition=available --timeout=60s --all deployments -n gotk-system
-  kustomize build cluster/admin/base/gotk/chart-repositories | kubectl apply -f -
+need() {
+  command -v "$1" >/dev/null 2>&1 || fatal "'$1' required on \$PATH but not found"
+}
 
-  kubectl apply -f bootstrap/repos
+deploy_gotk() {
+  info "Installing gotk components"
+  # Apply gotk components
+  kustomize build cluster/admin/base/gotk/toolkit | kubectl apply -f -
+
+  info "Waiting for gotk components to initialize"
+  kubectl wait --for=condition=available --timeout=60s --all deployments -n gotk-system
+
+  info "Registering required HelmRepositories"
+  # apply helmrepositories
+  kustomize build cluster/admin/base/gotk/chart-repositories | kubectl apply -f -
+}
+
+deploy_umbrella() {
+  info "Applying the current GitRepository"
+
+  # apply the repository with the current branch
+  cat bootstrap/repos/* | sed -e 's/$BRANCH/'$(git rev-parse --abbrev-ref HEAD)'/g' | kubectl apply -f -
+
+  info "Applying the umbrella tenants"
+
+  # apply the tenants
   kubectl apply -f bootstrap/tenants
+}
+
+{
+  deploy_gotk
+  deploy_umbrella
 }
